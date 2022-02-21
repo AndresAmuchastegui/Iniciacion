@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+
+<link href="estilo.css" rel="stylesheet">
+
+    <title>Document</title>
+
+<script>
+
+
+    console.log("hola mundo por consola");
+
+    function suma(){
+        var puntos = Number(document.getElementById("puntos").innerHTML);
+        console.log("Los puntos son:"+puntos);
+        var suma = puntos+1;
+        document.getElementById("puntos").innerHTML = suma;
+
+
+
+    }
+
+
+    function total() {
+        var puntos = Number(document.getElementById("puntos").innerHTML);
+        if(puntos>20) { alert("bien hecho!") }else{ alert("bajo puntaje") };
+    }
+
+</script>
+
+</head>
+
+<body style="">
+
+    <div id="menu">
+
+        <div id="titulo" style="width: 70% ; float: left;"><h5>Cynthia</h5></div>
+        <div id="menu-interior" style="width: 30%; float: left;">
+                <ul style="list-style: none;">
+                    <li style="float: left; width: 100PX;">QUIEN</li>
+                    <li style="float: left; width: 100PX;"><a href="que.html">QUE</a></li>
+                    <li style="float: left; width: 100PX;">DONDE</li>
+                </ul>
+
+
+        </div>
+
+    </div>
+
+    <div id="cuerpo" style="width: 100%; background-color: #1abc9c ; height: 600px; float: left; padding-top: 100px;">
+        <h3 class="TB">QUIEN SOY?</h3>
+        <p style="text-align: center;"><img src="img/aguila.jpg" style="border-radius:200px;"></p>
+        <h3 class="TB">Soy un aventurero</h3>
+    </div>
+
+    <div id="descripcion" style="float: left;">
+        <form>
+           
+            <input type="button" value="click para sumar puntos" id="b1" onclick="suma()">
+            <p>PUNTOS: <span id="puntos">0</span></p>
+
+            <input type="button" value="calcular resultado" id="b2" onclick="total()">
+        </form>
+    </div>
+
+</body>
+
+</html>
